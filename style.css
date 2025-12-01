@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/* General body styles */
+body, html {
+    margin: 0;
+    font-family: 'Major Mono Display', monospace;
+}
+/* Apply this to your navigation bar element, e.g., a <nav> or <div> */
+.navbar {
+    /* 1. Key property: Acts like 'static' until the specified scroll point */
+    position: sticky;
+    
+    /* 2. When the navbar's top edge hits 0px from the viewport top, it sticks */
+    top: 0; 
+    
+    /* Optional: Styling */
+    background-color: #333;
+    z-index: 100;
+    padding: 15px 0;
+    width: 100%; /* Important for some browsers */
+}
+
+/* --- Hero Image Section Styling --- */
+
+.hero-image-section {
+    /* Set a visible height for the hero section */
+    height: 700px; 
+    
+    /* 1. Set the background image */
+    background-image: url("https://wallpaper.forfun.com/fetch/3d/3dc6500219ddb1a730c15ab50da2564e.jpeg"); 
+    
+    /* 2. Key Setting: Image scrolls with the container (default behavior) */
+    background-attachment: scroll; /* This is the opposite of the parallax effect */
+    
+    /* 3. Do not repeat the image */
+    background-repeat: no-repeat;
+    
+    /* 4. Center the image */
+    background-position: center;
+    
+    /* 5. Scale the image to cover the entire container */
+    background-size: cover;
+
+    /* Styling for content overlaying the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content-text {
+    font-size: 3em;
+}
+
+/* --- Main Content Styling --- */
+
+.main-content {
+    padding: 50px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.main-content{
+    text-align: center;
+    text-shadow: 10px 10px 2.5px rgba(0, 0, 0, 0.1);
+}
+html {
+    /* The key property: makes all jumps to anchors smooth */
+    scroll-behavior: smooth;
+}
+/* --- 1. Initial State (Hidden) --- */
+#website-container {
+    /* Initially hide the content completely */
+    opacity: 0; 
+    
+    /* Define the transition speed/style for the fade effect */
+    transition: opacity 1s ease-in-out; /* Fades over 1.5 seconds */
+}
+
+/* --- 2. Final State (Visible) --- */
+/* This class is added by JavaScript */
+#website-container.loaded {
+    /* Make the content fully visible */
+    opacity: 1; 
+}
