@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 /* General body styles */
+body{
+    background:#1c0b00
+}
 body, html {
     margin: 0;
     font-family: 'Major Mono Display', monospace;
@@ -14,7 +17,7 @@ body, html {
     top: 0; 
     
     /* Optional: Styling */
-    background-color: #333;
+    background-color: #1f1100;
     z-index: 100;
     padding: 15px 0;
     width: 100%; /* Important for some browsers */
@@ -27,7 +30,7 @@ body, html {
     height: 700px; 
     
     /* 1. Set the background image */
-    background-image: url("https://wallpaper.forfun.com/fetch/3d/3dc6500219ddb1a730c15ab50da2564e.jpeg"); 
+    background-image: url("https://wallpaper.forfun.com/fetch/b4/b430a362213d26e0b7312ae196a038b3.jpeg?w=1470&r=0.5625&f=webp"); 
     
     /* 2. Key Setting: Image scrolls with the container (default behavior) */
     background-attachment: scroll; /* This is the opposite of the parallax effect */
@@ -57,12 +60,13 @@ body, html {
 
 .main-content {
     padding: 50px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1c0b00;
+    color: #eee;
 }
 
 .main-content{
     text-align: center;
+    color:white;
     text-shadow: 10px 10px 2.5px rgba(0, 0, 0, 0.1);
 }
 html {
@@ -83,4 +87,15 @@ html {
 #website-container.loaded {
     /* Make the content fully visible */
     opacity: 1; 
+}
+.container {
+    position: relative;
+  /* Use 'top' with a negative value to move it UP */
+  top: -500px; /* Moves the column 20 pixels up from its original spot */
+    background-color: #001c23;
+    color: rgb(251, 249, 249);
+    text-align: center;
+    padding: 20px;
+  /* Use 'px' for specific curve size, or '%' for a curve relative to the element size */
+  border-radius: 20px; /* Applies a 15-pixel radius to all four corners */
 }
