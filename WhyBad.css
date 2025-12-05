@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/* General body styles */
+body{
+    background-color: #240e00;
+}
+body, html {
+    margin: 0;
+    font-family: 'Major Mono Display', monospace;
+}
+/* Apply this to your navigation bar element, e.g., a <nav> or <div> */
+.navbar {
+    /* 1. Key property: Acts like 'static' until the specified scroll point */
+    position: sticky;
+    
+    /* 2. When the navbar's top edge hits 0px from the viewport top, it sticks */
+    top: 0; 
+    
+    /* Optional: Styling */
+    background-color: #2e1200;
+    color: aliceblue;
+    z-index: 100;
+    padding: 15px 0;
+    width: 100%; /* Important for some browsers */
+
+}
+/* --- Hero Image Section Styling --- */
+
+/* Container that holds the video and text */
+.hero-image-section {
+    position: relative; /* Essential for positioning the video absolutely within it */
+    overflow: hidden; /* Hides any video content that extends beyond the section */
+    height: 400px; /* Set a specific height for your hero section */
+    /* Add any other background or padding styles for the content here */
+    
+}
+
+/* Container for the iFrame (used to size the video) */
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* Make it wider than the viewport to ensure coverage */
+    height: 100vh; 
+    min-width: 50%;
+    min-height: 50%;
+    transform: translate(-50%, -50%); /* Centers the container */
+    z-index: 1; /* Puts the video below the content */
+}
+
+/* The actual iFrame styling */
+.video-background iframe {
+    width: 100%;
+    height: 100%;
+    min-width: 100vw; 
+    min-height: 100vh;
+    pointer-events: none; /* Prevents clicks on the video from pausing it */
+}
+
+/* Ensures the text content is above the video */
+.content-text {
+    position: relative;
+    z-index: 10; /* Higher than the video z-index (1) */
+    color: white; /* Example: make text readable over the dark video */
+    text-align: center;
+    padding-top: 150px; /* Example: vertically center the text */
+}
+
+.content-text {
+    font-size: 3em;
+}
+
+/* --- Main Content Styling --- */
+
+.main-content{
+    text-align: center;
+    color:white;
+    text-shadow: 10px 10px 2.5px rgba(0, 0, 0, 0.1);
+}
+html {
+    /* The key property: makes all jumps to anchors smooth */
+    scroll-behavior: smooth;
+}
+/* --- 2. Final State (Visible) --- */
+/* This class is added by JavaScript */
+#website-container.loaded {
+    /* Make the content fully visible */
+    opacity: 1; 
+}
+.container {
+    position: relative;
+  /* Use 'top' with a negative value to move it UP */
+  top: -500px; /* Moves the column 20 pixels up from its original spot */
+    background-color: #001c23;
+    color: rgb(251, 249, 249);
+    text-align: center;
+    padding: 20px;
+  /* Use 'px' for specific curve size, or '%' for a curve relative to the element size */
+  border-radius: 20px; /* Applies a 15-pixel radius to all four corners */
+}
+article {
+    /* 1. Max Width for Readability */
+    max-width: 800px; /* Text blocks should be around 70-80 characters wide */
+    margin: 0 auto; /* Centers the article block on the page */
+    padding: 40px; /* Add internal spacing */
+    color: white;
+    /* 2. Subtle Visual Separation */
+    background-color: #001c23; /* Use a clean white or slightly off-white */
+    box-shadow: 0 10px 30px rgb(19, 6, 0); /* Soft, subtle shadow lift */
+    border-radius: 12px; /* Smooth, rounded corners */
+    text-align: center;
+    padding-top: 20px;
+}
