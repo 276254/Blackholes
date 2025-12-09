@@ -99,3 +99,12 @@ html {
   /* Use 'px' for specific curve size, or '%' for a curve relative to the element size */
   border-radius: 20px; /* Applies a 15-pixel radius to all four corners */
 }
+.iframe{
+    position: relative;
+    top: -400px;
+    width: 800px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgb(19, 6, 0);
+    text-align: center;
+}

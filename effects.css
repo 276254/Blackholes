@@ -2,7 +2,7 @@
 
 /* General body styles */
 body{
-    background-color: #240e00;
+    background-color: #002936;
 }
 body, html {
     margin: 0;
@@ -17,7 +17,7 @@ body, html {
     top: 0; 
     
     /* Optional: Styling */
-    background-color: #2e1200;
+    background-color: #009499;
     color: aliceblue;
     z-index: 100;
     padding: 15px 0;
@@ -91,23 +91,23 @@ html {
     position: relative;
   /* Use 'top' with a negative value to move it UP */
   top: -500px; /* Moves the column 20 pixels up from its original spot */
-    background-color: #231200;
+    background-color: #004759;
     color: rgb(251, 249, 249);
     text-align: center;
     padding: 20px;
   /* Use 'px' for specific curve size, or '%' for a curve relative to the element size */
-  border-radius: 200px; /* Applies a 15-pixel radius to all four corners */
+  border-radius: 20px; /* Applies a 15-pixel radius to all four corners */
 }
 article {
     /* 1. Max Width for Readability */
-    max-width: 1500px; /* Text blocks should be around 70-80 characters wide */
+    max-width: 800px; /* Text blocks should be around 70-80 characters wide */
     margin: 0 auto; /* Centers the article block on the page */
-    padding: 50px; /* Add internal spacing */
+    padding: 40px; /* Add internal spacing */
     color: white;
     /* 2. Subtle Visual Separation */
-    background-color: #cb7700; /* Use a clean white or slightly off-white */
-    box-shadow: 0 10px 30px rgb(72, 23, 0); /* Soft, subtle shadow lift */
+    background-color: #00323e; /* Use a clean white or slightly off-white */
+    box-shadow: 0 10px 30px rgb(19, 6, 0); /* Soft, subtle shadow lift */
     border-radius: 12px; /* Smooth, rounded corners */
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
 }
