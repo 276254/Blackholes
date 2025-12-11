@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/* General body styles */
+body{
+    background-color: #010e1a;
+}
+body, html {
+    margin: 0;
+    font-family: 'Major Mono Display', monospace;
+}
+/* Apply this to your navigation bar element, e.g., a <nav> or <div> */
+.navbar {
+    /* 1. Key property: Acts like 'static' until the specified scroll point */
+    position: sticky;
+    
+    /* 2. When the navbar's top edge hits 0px from the viewport top, it sticks */
+    top: 0; 
+    
+    /* Optional: Styling */
+    background-color: #07002e;
+    color: aliceblue;
+    z-index: 100;
+    padding: 15px 0;
+    width: 100%; /* Important for some browsers */
+
+}
+/* --- Hero Image Section Styling --- */
+
+/* Container that holds the video and text */
+.hero-image-section {
+    position: relative; /* Essential for positioning the video absolutely within it */
+    overflow: hidden; /* Hides any video content that extends beyond the section */
+    height: 400px; /* Set a specific height for your hero section */
+    /* Add any other background or padding styles for the content here */
+    
+}
+
+/* Container for the iFrame (used to size the video) */
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* Make it wider than the viewport to ensure coverage */
+    height: 100vh; 
+    min-width: 50%;
+    min-height: 50%;
+    transform: translate(-50%, -50%); /* Centers the container */
+    z-index: 1; /* Puts the video below the content */
+}
+
+/* The actual iFrame styling */
+.video-background iframe {
+    width: 100%;
+    height: 100%;
+    min-width: 100vw; 
+    min-height: 100vh;
+    pointer-events: none; /* Prevents clicks on the video from pausing it */
+}
+
+/* Ensures the text content is above the video */
+.content-text {
+    position: relative;
+    z-index: 10; /* Higher than the video z-index (1) */
+    color: white; /* Example: make text readable over the dark video */
+    text-align: center;
+    padding-top: 150px; /* Example: vertically center the text */
+}
+
+.content-text {
+    font-size: 3em;
+}
+
+/* --- Main Content Styling --- */
+
+.main-content{
+    text-align: center;
+    color:white;
+    text-shadow: 10px 10px 2.5px rgba(0, 0, 0, 0.1);
+}
+html {
+    /* The key property: makes all jumps to anchors smooth */
+    scroll-behavior: smooth;
+}
+/* --- 2. Final State (Visible) --- */
+/* This class is added by JavaScript */
+#website-container.loaded {
+    /* Make the content fully visible */
+    opacity: 1; 
+}
+.container {
+    position: relative;
+  /* Use 'top' with a negative value to move it UP */
+  top: -500px; /* Moves the column 20 pixels up from its original spot */
+    background-color: #231200;
+    color: rgb(251, 249, 249);
+    text-align: center;
+    padding: 20px;
+  /* Use 'px' for specific curve size, or '%' for a curve relative to the element size */
+  border-radius: 200px; /* Applies a 15-pixel radius to all four corners */
+}
+article {
+    /* 1. Max Width for Readability */
+    max-width: 1500px; /* Text blocks should be around 70-80 characters wide */
+    margin: 0 auto; /* Centers the article block on the page */
+    padding: 50px; /* Add internal spacing */
+    color: white;
+    /* 2. Subtle Visual Separation */
+    background-color: #032f4a; /* Use a clean white or slightly off-white */
+    box-shadow: 0 10px 30px rgb(21, 0, 42); /* Soft, subtle shadow lift */
+    border-radius: 12px; /* Smooth, rounded corners */
+    text-align: center;
+    padding-top: 50px;
+}
+/* Import a scientific/space-themed font (optional) */
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'); */
+
+/* --- General Footer Styling --- */
+footer {
+    background-color: #000000; /* Pure black abyss */
+    color: #b3e5fc; /* Light blue/cyan for contrast, like distant starlight */
+    font-family: 'Space Mono', monospace; /* Use a fixed-width, scientific font */
+    padding: 40px 0 20px 0;
+    border-top: 5px solid #1a237e; /* A deep blue line for separation */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- The 'Event Horizon' Separator --- */
+.event-horizon {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 30px;
+    /* A subtle, dark radial gradient to mimic the horizon boundary */
+    background: radial-gradient(circle, #303030 0%, #000000 70%);
+    box-shadow: 0 0 5px rgba(26, 35, 126, 0.5); /* Blue glow */
+}
+
+/* --- Layout Grid --- */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #ffe082; /* Soft gold for headings */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Links Styling --- */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #81d4fa; /* Slightly brighter blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+    color: #ffffff; /* White hover color, like getting closer to the star */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow on hover */
+}
+
+/* --- Newsletter/Form Styling --- */
+.footer-section form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #1a237e;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    flex-grow: 1;
+    border-radius: 3px 0 0 3px;
+}
+
+.footer-section button {
+    padding: 10px 15px;
+    background-color: #1a237e; /* Deep blue button */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0 3px 3px 0;
+    transition: background-color 0.3s;
+}
+
+.footer-section button:hover {
+    background-color: #000000;
+    border: 1px solid #81d4fa; /* Blue border on hover */
+}
+
+/* --- Bottom Section and Social Icons --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #303030; /* A faint dashed line */
+    padding-top: 20px;
+    font-size: 0.85em;
+    color: #5d669a; /* Muted color for copyright info */
+}
+
+.social-icons a {
+    color: #81d4fa;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffe082; /* Gold hover color */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+    }
+}
